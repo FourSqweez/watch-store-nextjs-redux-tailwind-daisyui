@@ -1,12 +1,8 @@
-import axios from 'axios'
 import Head from 'next/head'
+import ProductsCart from '../components/ProductsCart'
 import { getAllProducts } from './api/productsApi'
 
-export default function Home({ data }) {
-	console.log('Test data : ', data)
-
-	const products = data.map((p) => p)
-	console.log('Products : ', products)
+export default function Home({ products }) {
 
 	return (
 		<div>
@@ -16,19 +12,10 @@ export default function Home({ data }) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<main className="text-blue-800 text-5xl bg-red-300">
-				{products &&
-					products.map((product) => {
-						return (
-							<div>
-								<span>{product.attributes.brand.data.attributes.name}    </span>
-								<span>{}</span>
-								<span>{product.attributes.name}</span>
-								<span>{product.attributes.price}</span>
-								<br />
-							</div>
-						)
-					})}
+			<header></header>
+
+			<main>
+				<ProductsCart products={products} />
 			</main>
 
 			<footer></footer>
@@ -37,10 +24,10 @@ export default function Home({ data }) {
 }
 
 export async function getStaticProps() {
-	const { data } = await getAllProducts()
+	const { data: products } = await getAllProducts()
 	return {
 		props: {
-			data,
+			products,
 		},
 	}
 }
