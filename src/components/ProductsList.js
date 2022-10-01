@@ -1,7 +1,7 @@
 import React from 'react'
 import ProductItem from './ProductItem'
 
-const ProductsCart = ({ products }) => {
+const ProductsList = ({ products }) => {
 	return (
 		<div>
 			{products &&
@@ -28,4 +28,4 @@ const ProductsCart = ({ products }) => {
 	)
 }
 
-export default ProductsCart
+export default ProductsList

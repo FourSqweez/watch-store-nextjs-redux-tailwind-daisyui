@@ -1,9 +1,8 @@
 import Head from 'next/head'
-import ProductsCart from '../components/ProductsCart'
+import ProductsList from '../components/ProductsList'
 import { getAllProducts } from './api/productsApi'
 
 export default function Home({ products }) {
-
 	return (
 		<div>
 			<Head>
@@ -15,7 +14,7 @@ export default function Home({ products }) {
 			<header></header>
 
 			<main>
-				<ProductsCart products={products} />
+				<ProductsList products={products} />
 			</main>
 
 			<footer></footer>
