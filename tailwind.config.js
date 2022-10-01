@@ -8,4 +8,9 @@ module.exports = {
 	daisyui: {
 		themes: false,
 	},
+	theme: {
+		fontFamily: {
+			roboto: ['Roboto', 'sans-serif'],
+		},
+	},
 }
