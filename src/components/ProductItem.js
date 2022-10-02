@@ -77,7 +77,7 @@ const ProductItem = ({
 				</div>
 			) : (
 				<>
-					<div className="mb-2">
+					<div className="mb-2 w-full h-full">
 						<div className="flex w-full h-[109px] bg-[#FFFFFF] rounded-[8px] items-center">
 							<div className="flex items-center w-[150px] justify-center">
 								<Image
@@ -89,14 +89,14 @@ const ProductItem = ({
 								/>
 							</div>
 
-							<div className="w-full h-[80px] flex flex-col justify-center gap-2 text-[#484848] text-[20px] leading-[18px]">
-								<div className='font-[600]'>{name}</div>
+							<div className="w-full h-[80px] flex flex-col justify-center gap-2 text-[#484848] text-[20px] leading-[18px] ml-1">
+								<div className='font-[600] text-sm sm:text-[20px] line-clamp-2'>{name}</div>
 								<div className="line-clamp-2 text-[#A4A4A4] text-[12px] leading-[18px] font-[400]">
 									{description}
 								</div>
 							</div>
-							<div className='flex h-[80px] gap-2 justify-center flex-col items-end pr-4 w-[200px]'>
-								<p className="text-[20px] font-[500] text-[#FF6F61] leading-[18px]">
+							<div className='flex h-[80px] gap-2 justify-center flex-col items-end pr-4 w-[220px]'>
+								<p className="text-sm sm:text-[20px] font-[500] text-[#FF6F61] leading-[18px]">
 									{price}.00
 								</p>
 								<p className="text-[14px] text-[#939393] leading-[18px]">
