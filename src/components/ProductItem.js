@@ -95,7 +95,7 @@ const ProductItem = ({
 									{description}
 								</div>
 							</div>
-							<div className='flex flex-col items-end pr-4 w-[200px]'>
+							<div className='flex h-[80px] gap-2 justify-center flex-col items-end pr-4 w-[200px]'>
 								<p className="text-[20px] font-[500] text-[#FF6F61] leading-[18px]">
 									{price}.00
 								</p>
