@@ -6,7 +6,7 @@ const ProductsList = ({ products }) => {
 	return (
 		<div className="w-full max-w-[1050px] my-10">
 			<div className="flex justify-between mb-5">
-				<p>Product (10)</p>
+				<p>Product ({products.length})</p>
 				<span className="flex gap-1">
 					<div>logo</div>
 					<div>logo</div>
