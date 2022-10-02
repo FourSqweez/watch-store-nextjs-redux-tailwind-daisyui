@@ -5,7 +5,7 @@ import { BagHappy } from 'iconsax-react'
 const Navbar = () => {
 	return (
 		<div className="flex justify-center w-full h-[76px] bg-[#FF6F61] ">
-			<div className="flex w-full max-w-6xl h-full justify-between items-center">
+			<div className="flex w-full max-w-[1050px] h-full justify-between items-center">
 				<div className="flex justify-center">
 					<Image
 						src="https://sagnerli.sirv.com/cc-quiz/cob-logo.png"
