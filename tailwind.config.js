@@ -4,7 +4,7 @@ module.exports = {
 		'./src/pages/**/*.{js,ts,jsx,tsx}',
 		'./src/components/**/*.{js,ts,jsx,tsx}',
 	],
-	plugins: [require('daisyui')],
+	plugins: [require('daisyui'), require('@tailwindcss/line-clamp')],
 	daisyui: {
 		themes: false,
 	},
