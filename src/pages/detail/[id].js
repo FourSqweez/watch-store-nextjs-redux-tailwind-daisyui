@@ -1,6 +1,8 @@
 import { BagHappy } from 'iconsax-react'
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { addToCart } from '../../app/slices/cartSlice'
 import { getAllProducts, getDetail } from '../api/productsApi'
 
 export const getStaticProps = async ({ params }) => {
@@ -24,7 +26,23 @@ export const getStaticPaths = async () => {
 }
 
 const Detail = ({ productDetail }) => {
-	console.log('Product detail : ', productDetail)
+	//console.log('Product detail : ', productDetail)
+	const dispatch = useDispatch()
+	const [itemQuantity, setItemQuantity] = useState(0)
+
+	const addProductItemToCart = (product) => {
+		product = { ...product, quantity: itemQuantity }
+		dispatch(addToCart(product))
+	}
+
+	const incrementQuantity = () => {
+		setItemQuantity((itemQuantity + 1))
+	}
+
+	const decrementQuantity = () => {
+		setItemQuantity((itemQuantity - 1))
+	}
+
 	return (
 		<div className="w-full h-screen flex justify-center items-center">
 			<div className=" lg:flex flex-col lg:flex-row h-full lg:h-[448px] w-[1061px] gap-4 bg-white rounded-[16px] p-[24px]">
@@ -66,23 +84,32 @@ const Detail = ({ productDetail }) => {
 						<p className="text-[#484848] text-[14px] font-[400] leading-[18px]">
 							Quantity:
 						</p>
-						<button className="flex h-[38px] text-center w-[128.81px] items-center border-[#484848] border-[1px] rounded-[10px]">
-							<button className="h-[36px] min-w-[37.52px] text-[20px] text-[#939393] font-[400] leading-[22px]">
+						<div className="flex h-[38px] text-center w-[128.81px] items-center border-[#484848] border-[1px] rounded-[10px]">
+							<button
+								onClick={() => decrementQuantity()}
+								className="h-[36px] min-w-[37.52px] text-[20px] text-[#939393] font-[400] leading-[22px]"
+							>
 								-
 							</button>
 							<p className="h-full flex items-center justify-center w-full text-[14px] bg-[#F5F5F5] font-[400] leading-[22px]">
-								1
+								{itemQuantity}
 							</p>
-							<button className=" h-[36px] min-w-[37.52px] text-[14px] text-[#939393] font-[400] leading-[22px]">
+							<button
+								onClick={() => incrementQuantity()}
+								className=" h-[36px] min-w-[37.52px] text-[14px] text-[#939393] font-[400] leading-[22px]"
+							>
 								+
 							</button>
-						</button>
+						</div>
 					</div>
 					<div className="flex w-full justify-center lg:justify-start">
-						<button className="bg-[#FF6F61] btn flex items-center text-center justify-center gap-2 text-[#F9F9F9] text-[14px] font-[600] uppercase leading-[18px] tracking-widest w-[242px] h-[50px] rounded-[8px] my-6">
+						<div
+							onClick={() => addProductItemToCart(productDetail)}
+							className="bg-[#FF6F61] btn flex items-center text-center justify-center gap-2 text-[#F9F9F9] text-[14px] font-[600] uppercase leading-[18px] tracking-widest w-[242px] h-[50px] rounded-[8px] my-6"
+						>
 							<BagHappy size="26" color="#F9F9F9" />
 							Add to cart
-						</button>
+						</div>
 					</div>
 				</div>
 			</div>
