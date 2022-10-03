@@ -33,8 +33,6 @@ const ProductItem = ({
 	rating,
 	switched,
 }) => {
-	console.log('Test Id : ', productId)
-
 	return (
 		<>
 			{switched && switched === true ? (
