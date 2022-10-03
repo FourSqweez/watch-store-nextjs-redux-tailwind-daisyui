@@ -5,9 +5,7 @@ import Link from 'next/link'
 import { useSelector } from 'react-redux'
 
 const Navbar = () => {
-	const quantity = useSelector((state) =>
-		state.cart.product.map((q) => q.quantity)
-	)
+	const quantity = useSelector((state) => state.cart.map((q) => q.quantity))
 	const totalAmounts = quantity.reduce(
 		(accumulator, amount) => accumulator + amount,
 		0
