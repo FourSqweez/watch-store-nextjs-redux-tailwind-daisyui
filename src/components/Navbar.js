@@ -23,7 +23,10 @@ const Navbar = () => {
 					<li>Accessories</li>
 				</ul>
 				<div className="flex gap-2 items-center">
-					<BagHappy size="32" color="#F9F9F9" />
+					<div className="relative pr-1">
+						<div className="absolute w-5 h-5 text-center flex items-center justify-center rounded-full top-0 right-0 bg-[#1A586A] text-white text-[10px] leading-[14px]">0</div>
+						<BagHappy size="32" color="#F9F9F9" />
+					</div>
 					<p className="text-[#F9F9F9]">Cart</p>
 				</div>
 			</div>
