@@ -27,8 +27,8 @@ const Detail = ({ productDetail }) => {
 	console.log('Product detail : ', productDetail)
 	return (
 		<div className="w-full h-screen flex justify-center items-center">
-			<div className=" flex h-[448px] w-[1061px] gap-2 bg-white rounded-[16px] p-[24px]">
-				<div className="h-[400px] min-w-[400px] flex items-center">
+			<div className=" lg:flex flex-col lg:flex-row h-full lg:h-[448px] w-[1061px] gap-2 bg-white rounded-[16px] p-[24px]">
+				<div className="h-[400px] lg:min-w-[400px] lg:max-w-[400px] sm:flex w-full flex-col justify-center items-center">
 					<Image
 						src={productDetail.attributes.image_url}
 						width="400px"
@@ -46,14 +46,14 @@ const Detail = ({ productDetail }) => {
 							({productDetail.attributes.review.number} reviews)
 						</div>
 					</div>
-					<p className="text-[14px] text-[#939393] font-[400] leading-[18px]">
+					<p className="text-[14px] text-[#939393]  font-[400] leading-[18px]">
 						{productDetail.attributes.description}
 					</p>
 
-					<p className="mt-2 text-[14px] leading-[18px] font-[500] text-[#939393]">
+					<p className="md:mt-2 text-[14px] leading-[18px] font-[500] text-[#939393]">
 						price
 					</p>
-					<div className="flex gap-16 items-center">
+					<div className="flex gap-16 items-center justify-center lg:justify-start">
 						<p className="text-[#FF6F61] text-[28px] font-[500] leading-[36px]">
 							{productDetail.attributes.price}.00
 						</p>
@@ -61,7 +61,7 @@ const Detail = ({ productDetail }) => {
 							12,000.00
 						</p>
 					</div>
-					<div className="flex gap-12 items-center">
+					<div className="flex gap-12 items-center justify-center lg:justify-start">
 						<p className="text-[#484848] text-[14px] font-[400] leading-[18px]">
 							Quantity:
 						</p>
@@ -77,10 +77,12 @@ const Detail = ({ productDetail }) => {
 							</button>
 						</div>
 					</div>
-					<button className="bg-[#FF6F61] flex items-center text-center justify-center gap-2 text-[#F9F9F9] text-[14px] font-[600] uppercase leading-[18px] tracking-widest w-[242px] h-[50px] rounded-[8px] my-6">
-						<BagHappy size="26" color="#F9F9F9" />
-						Add to cart
-					</button>
+					<div className="flex w-full justify-center lg:justify-start">
+						<button className="bg-[#FF6F61] flex items-center text-center justify-center gap-2 text-[#F9F9F9] text-[14px] font-[600] uppercase leading-[18px] tracking-widest w-[242px] h-[50px] rounded-[8px] my-6">
+							<BagHappy size="26" color="#F9F9F9" />
+							Add to cart
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
