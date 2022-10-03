@@ -9,7 +9,7 @@
       @apply font-roboto;
    }
    body {
-      @apply bg-[#F5F5F5];
+      @apply bg-[#F5F5F5] h-screen;
    }
    li {
       @apply text-[#F9F9F9] cursor-pointer tracking-wide;
