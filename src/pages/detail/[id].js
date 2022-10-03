@@ -36,11 +36,11 @@ const Detail = ({ productDetail }) => {
 	}
 
 	const incrementQuantity = () => {
-		setItemQuantity((itemQuantity + 1))
+		setItemQuantity(itemQuantity + 1)
 	}
 
 	const decrementQuantity = () => {
-		setItemQuantity((itemQuantity - 1))
+		setItemQuantity(itemQuantity - 1)
 	}
 
 	return (
@@ -84,10 +84,11 @@ const Detail = ({ productDetail }) => {
 						<p className="text-[#484848] text-[14px] font-[400] leading-[18px]">
 							Quantity:
 						</p>
-						<div className="flex h-[38px] text-center w-[128.81px] items-center border-[#484848] border-[1px] rounded-[10px]">
+						<div className="flex h-[38px] text-center w-[128.81px] items-center border-[#484848] border-[1px] rounded-[10px] overflow-hidden">
 							<button
 								onClick={() => decrementQuantity()}
-								className="h-[36px] min-w-[37.52px] text-[20px] text-[#939393] font-[400] leading-[22px]"
+								className="h-full min-w-[37.52px] text-[20px] text-[#939393] font-[400] leading-[22px]"
+								disabled={itemQuantity === 0 ? true : false}
 							>
 								-
 							</button>
@@ -96,7 +97,7 @@ const Detail = ({ productDetail }) => {
 							</p>
 							<button
 								onClick={() => incrementQuantity()}
-								className=" h-[36px] min-w-[37.52px] text-[14px] text-[#939393] font-[400] leading-[22px]"
+								className=" h-full min-w-[37.52px] text-[14px] text-[#939393] font-[400] leading-[22px]"
 							>
 								+
 							</button>
@@ -105,7 +106,8 @@ const Detail = ({ productDetail }) => {
 					<div className="flex w-full justify-center lg:justify-start">
 						<div
 							onClick={() => addProductItemToCart(productDetail)}
-							className="bg-[#FF6F61] btn flex items-center text-center justify-center gap-2 text-[#F9F9F9] text-[14px] font-[600] uppercase leading-[18px] tracking-widest w-[242px] h-[50px] rounded-[8px] my-6"
+							disabled={itemQuantity === 0 ? true : false}
+							className="bg-[rgb(250,119,107)] btn flex items-center text-center justify-center gap-2 text-[#F9F9F9] text-[14px] font-[600] uppercase leading-[18px] tracking-widest w-[242px] h-[50px] rounded-[8px] my-6"
 						>
 							<BagHappy size="26" color="#F9F9F9" />
 							Add to cart
