@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Navbar from '../components/Navbar'
 import ProductsList from '../components/ProductsList'
 import { getAllProducts } from './api/productsApi'
 
@@ -13,7 +12,6 @@ export default function Home({ products }) {
 			</Head>
 
 			<header>
-				<Navbar />
 			</header>
 
 			<main className="flex justify-center h-full w-full">
