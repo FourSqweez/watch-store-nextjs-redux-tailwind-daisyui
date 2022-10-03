@@ -14,4 +14,16 @@
    li {
       @apply text-[#F9F9F9] cursor-pointer tracking-wide;
    }
+
+   .title {
+		@apply truncate whitespace-nowrap overflow-hidden;
+  }
+
+ table tbody {
+	@apply border-solid border-y-2;
+ }
+
+ hr {
+	@apply  my-5 border-[1px] bg-black border-black;
+ }
 }
