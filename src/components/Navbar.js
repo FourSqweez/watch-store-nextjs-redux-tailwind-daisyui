@@ -2,8 +2,19 @@ import Image from 'next/image'
 import React from 'react'
 import { BagHappy } from 'iconsax-react'
 import Link from 'next/link'
+import { useSelector } from 'react-redux'
 
 const Navbar = () => {
+	const quantity = useSelector((state) =>
+		state.cart.product.map((q) => q.quantity)
+	)
+	const totalAmounts = quantity.reduce(
+		(accumulator, amount) => accumulator + amount,
+		0
+	)
+	console.log('Nav bar quantity : ', quantity)
+	console.log('Nav bar total quantity : ', totalAmounts)
+
 	return (
 		<div className="flex justify-center w-full h-[76px] bg-[#FF6F61] ">
 			<div className="flex w-full max-w-[1050px] h-full justify-between items-center">
@@ -25,7 +36,7 @@ const Navbar = () => {
 					<Link href="#">
 						<li>Women</li>
 					</Link>
-					<Link href='#'>
+					<Link href="#">
 						<li>Men</li>
 					</Link>
 					<Link href="#">
@@ -39,7 +50,7 @@ const Navbar = () => {
 					<div className="flex gap-2 items-center cursor-pointer">
 						<div className="relative pr-1">
 							<div className="absolute w-5 h-5 text-center flex items-center justify-center rounded-full top-0 right-0 bg-[#1A586A] text-white text-[10px] leading-[14px]">
-								0
+								{totalAmounts || 0}
 							</div>
 							<BagHappy size="32" color="#F9F9F9" />
 						</div>
