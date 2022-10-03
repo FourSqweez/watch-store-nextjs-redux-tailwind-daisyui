@@ -27,7 +27,7 @@ const Detail = ({ productDetail }) => {
 	console.log('Product detail : ', productDetail)
 	return (
 		<div className="w-full h-screen flex justify-center items-center">
-			<div className=" lg:flex flex-col lg:flex-row h-full lg:h-[448px] w-[1061px] gap-2 bg-white rounded-[16px] p-[24px]">
+			<div className=" lg:flex flex-col lg:flex-row h-full lg:h-[448px] w-[1061px] gap-4 bg-white rounded-[16px] p-[24px]">
 				<div className="h-[400px] lg:min-w-[400px] lg:max-w-[400px] sm:flex w-full flex-col justify-center items-center">
 					<Image
 						src={productDetail.attributes.image_url}
