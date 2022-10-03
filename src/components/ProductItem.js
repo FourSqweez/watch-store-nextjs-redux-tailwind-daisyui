@@ -87,10 +87,15 @@ const ProductItem = ({
 					</div>
 				</Link>
 			) : (
-				<Link href="/products/detail" passHref>
+				<Link
+					href={{
+						pathname: `/detail/${productId}`,
+					}}
+					passHref
+				>
 					<div className="mb-2 w-full h-full">
-						<div className="flex w-full h-[109px] bg-[#FFFFFF] rounded-[8px] items-center">
-							<div className="flex items-center w-[150px] justify-center">
+						<div className="flex w-full h-[109px] bg-[#FFFFFF] rounded-[8px] items-center cursor-pointer">
+							<div className="flex items-center w-[150px] justify-center ">
 								<Image
 									width={80}
 									height={80}
