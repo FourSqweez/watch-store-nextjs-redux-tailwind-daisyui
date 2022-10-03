@@ -34,6 +34,7 @@ const Detail = ({ productDetail }) => {
 						width="400px"
 						height="400px"
 						className="rounded-[15px]"
+						priority
 					/>
 				</div>
 				<div className="w-full h-full gap-2 flex flex-col">
