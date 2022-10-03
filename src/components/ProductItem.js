@@ -53,7 +53,7 @@ const ProductItem = ({
 							priority
 						/>
 						<div className="w-full ">
-							<p className="text-[14px] leading-[18px] line-clamp-2">
+							<p className="text-[14px] font-[600] leading-[18px] line-clamp-2">
 								{name}
 							</p>
 						</div>
