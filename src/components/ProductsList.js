@@ -6,7 +6,7 @@ import { IoGridOutline } from 'react-icons/io5'
 const ProductsList = ({ products }) => {
 	const [switched, setSwitched] = useState(true)
 
-	console.log('test : ', products)
+	// console.log('test : ', products)
 
 	return (
 		<div className="w-full max-w-[1050px] my-10 mx-2">
@@ -43,6 +43,7 @@ const ProductsList = ({ products }) => {
 								className=" flex w-full justify-center"
 							>
 								<ProductItem
+									productId={product.id}
 									switched={switched}
 									brandName={
 										product.attributes.brand.data.attributes.name ||
