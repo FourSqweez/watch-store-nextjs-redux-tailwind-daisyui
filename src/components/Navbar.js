@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import { BagHappy } from 'iconsax-react'
+import Link from 'next/link'
 
 const Navbar = () => {
 	return (
@@ -15,20 +16,36 @@ const Navbar = () => {
 					/>
 				</div>
 				<ul className="flex w-full max-w-3xl justify-evenly">
-					<li>Home</li>
-					<li>New Product</li>
-					<li>Women</li>
-					<li>Men</li>
-					<li>Kid</li>
-					<li>Accessories</li>
+					<Link href="/">
+						<li>Home</li>
+					</Link>
+					<Link href="#">
+						<li>New Product</li>
+					</Link>
+					<Link href="#">
+						<li>Women</li>
+					</Link>
+					<Link href='#'>
+						<li>Men</li>
+					</Link>
+					<Link href="#">
+						<li>Accessories</li>
+					</Link>
+					<Link href="#">
+						<li>Kid</li>
+					</Link>
 				</ul>
-				<div className="flex gap-2 items-center">
-					<div className="relative pr-1">
-						<div className="absolute w-5 h-5 text-center flex items-center justify-center rounded-full top-0 right-0 bg-[#1A586A] text-white text-[10px] leading-[14px]">0</div>
-						<BagHappy size="32" color="#F9F9F9" />
+				<Link href="/cart">
+					<div className="flex gap-2 items-center cursor-pointer">
+						<div className="relative pr-1">
+							<div className="absolute w-5 h-5 text-center flex items-center justify-center rounded-full top-0 right-0 bg-[#1A586A] text-white text-[10px] leading-[14px]">
+								0
+							</div>
+							<BagHappy size="32" color="#F9F9F9" />
+						</div>
+						<p className="text-[#F9F9F9]">Cart</p>
 					</div>
-					<p className="text-[#F9F9F9]">Cart</p>
-				</div>
+				</Link>
 			</div>
 		</div>
 	)
