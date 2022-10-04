@@ -16,7 +16,7 @@ const Navbar = () => {
 	return (
 		<div className="fixed top-0 w-full z-50">
 			<div className="flex justify-center w-full h-[76px] bg-[#FF6F61] ">
-				<div className="flex w-full max-w-[1050px] mx-4 sm:mx-0 h-full justify-between items-center">
+				<div className="flex w-full max-w-[1050px] mx-4 lg:mx-0 h-full justify-between items-center">
 					<div
 						className="flex justify-center cursor-pointer"
 						onClick={() => router.push('/')}
