@@ -135,7 +135,7 @@ const Cart = () => {
 														/>
 													</div>
 													<h4
-														className="w-full pl-2 items-center text-2xl text-[#484848]"
+														className="w-full pl-2 items-center text-2xl text-[#484848] line-clamp-1"
 														title={item.attributes.name}
 													>
 														{item.attributes.name}
