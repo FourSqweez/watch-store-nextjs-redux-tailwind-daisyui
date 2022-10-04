@@ -23,9 +23,9 @@ const Cart = () => {
 	}
 
 	return (
-		<div className="max-w-[1050px] mx-auto px-2">
+		<div className="h-screen w-full flex justify-center items-center">
 			{cart.length === 0 ? (
-				<div className="flex flex-col mt-60 items-center justify-center gap-4">
+				<div className="flex flex-col items-center justify-center gap-4">
 					<h2 className="flex text-center justify-center">
 						Your Cart is Empty!
 					</h2>
@@ -38,46 +38,46 @@ const Cart = () => {
 					</button>
 				</div>
 			) : (
-				<div className="">
+				<div>
 					{/* mobile */}
-					<div className="md:hidden min-w-[280px] sm:mx-10">
-						<p className="font-[500] leading-[18px] tracking-widest text-[28px] text-center mb-5 mt-5">
-							Cart
-						</p>
-						{/* loop */}
-						{cart &&
-							cart.map((item) => (
-								<div key={item.id}>
-									<div className="flex justify-between h-20 items-center last:mb-5">
-										<div className="flex w-full sm:w-full h-full items-center ml-2">
-											<div className="mr-2 h-full w-20 min-w-[4rem] sm:h-full relative overflow-hidden rounded-md">
-												<Image
-													layout="fill"
-													alt=""
-													objectFit="inherit"
-													priority
-													src={item.attributes.image_url}
-												/>
-											</div>
-											<div className="xs:w-[24rem] w-[24rem]">
-												<h4
-													className=" w-40 xs:w-80 sm:w-full"
-													title={item.attributes.name}
-												>
-													{item.attributes.name}
-												</h4>
-												<h4>{item.attributes.price}</h4>
-											</div>
-											<div className="w-20">
-												<div className="w-full h-full text-xl font-bold text-center ">
-													{item.quantity}
+					<div className="flex item-start">
+						<div className="md:hidden min-w-[280px] sm:mx-10">
+							<p className="text-3xl text-center mb-5">Cart</p>
+							{/* loop */}
+							{cart &&
+								cart.map((item) => (
+									<div key={item.id}>
+										<div className="flex justify-between h-full items-start last:mb-5">
+											<div className="flex  h-full items-center ml-2">
+												<div className="mr-2 h-20 w-20 min-w-[4rem]  relative overflow-hidden rounded-md">
+													<Image
+														layout="fill"
+														alt=""
+														objectFit="inherit"
+														priority
+														src={item.attributes.image_url}
+													/>
+												</div>
+												<div className="">
+													<h4
+														className="w-40 xs:w-80 sm:w-full line-clamp-1"
+														title={item.attributes.name}
+													>
+														{item.attributes.name}
+													</h4>
+													<h4>{item.attributes.price}</h4>
+												</div>
+												<div className="w-20">
+													<div className="w-full h-full text-xl font-bold text-center ">
+														{item.quantity}
+													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-							))}
-						{/* end loop */}
+								))}
+							{/* end loop */}
+						</div>
 					</div>
 
 					{/* desktop */}
@@ -157,10 +157,7 @@ const Cart = () => {
 					</div>
 
 					<div className="flex justify-end mt-3 ">
-						<button
-							onClick={() => handleBackDrop()}
-							className="btn border-none rounded-[8px] px-6 py-1.5 bg-[#FF6F61] leading-[18px] tracking-wider"
-						>
+						<button className="btn border-none rounded-[8px] px-6 py-1.5 bg-[#FF6F61] leading-[18px] tracking-wider">
 							Proceed to checkout
 						</button>
 					</div>
