@@ -116,7 +116,7 @@ const Detail = ({ productDetail }) => {
 							<div
 								onClick={() => addProductItemToCart(productDetail)}
 								disabled={itemQuantity === 0 ? true : false}
-								className="bg-[rgb(250,119,107)] btn flex items-center text-center justify-center gap-2 text-[#F9F9F9] text-[14px] font-[600] uppercase leading-[18px] tracking-widest w-[242px] h-[50px] rounded-[8px] my-6"
+								className="bg-[rgb(250,119,107)] border-none btn flex items-center text-center justify-center gap-2 text-[#F9F9F9] text-[14px] font-[600] uppercase leading-[18px] tracking-widest w-[242px] h-[50px] rounded-[8px] my-6"
 							>
 								<BagHappy size="26" color="#F9F9F9" />
 								Add to cart
