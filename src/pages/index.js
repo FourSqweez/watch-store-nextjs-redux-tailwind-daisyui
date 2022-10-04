@@ -11,14 +11,9 @@ export default function Home({ products }) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<header>
-			</header>
-
 			<main className="flex justify-center h-full w-full">
 				<ProductsList products={products} />
 			</main>
-
-			<footer></footer>
 		</div>
 	)
 }
