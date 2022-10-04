@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-axios.defaults.baseURL = 'https://cc-quiz-api.herokuapp.com/api/products'
+axios.defaults.baseURL = process.env.PRODUCT_URL_API
 
 export const getAllProducts = async () => {
 	return (
