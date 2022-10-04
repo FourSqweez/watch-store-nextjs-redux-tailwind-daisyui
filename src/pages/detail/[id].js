@@ -44,7 +44,7 @@ const Detail = ({ productDetail }) => {
 	}
 
 	return (
-		<div className="w-full h-screen items-center flex justify-center">
+		<div className="w-full h-full mt-20 sm:mt-0 items-center flex justify-center">
 			{productDetail && (
 				<div className=" lg:flex flex-col lg:flex-row h-full lg:h-[448px] w-[1061px] gap-4 bg-white rounded-[16px] p-[24px]">
 					<div className="h-[400px] lg:min-w-[400px] lg:max-w-[400px] sm:flex w-full flex-col justify-center items-center">
