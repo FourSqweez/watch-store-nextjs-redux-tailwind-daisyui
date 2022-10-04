@@ -2,24 +2,25 @@ import Image from 'next/image'
 import React from 'react'
 import { Star1 } from 'iconsax-react'
 import Link from 'next/link'
+import { MuiRating } from './MuiRating'
 
-const Rating = ({ rating }) => {
-	{
-		for (const i = 0; i <= rating; i++) {
-			return (
-				<div className="rating radio-xs w-full h-[18px]">
-					<input
-						type="radio"
-						readOnly
-						name="rating1"
-						className="mask mask-star-2 bg-[#FFB647] w-[14px] h-[18px] border-[#ffb647] border-2"
-					/>
-					{rating}
-				</div>
-			)
-		}
-	}
-}
+// const Rating = ({ rating }) => {
+// 	{
+// 		for (const i = 0; i <= rating; i++) {
+// 			return (
+// 				<div className="rating radio-xs w-full h-[18px]">
+// 					<input
+// 						type="radio"
+// 						readOnly
+// 						name="rating1"
+// 						className="mask mask-star-2 bg-[#FFB647] w-[14px] h-[18px] border-[#ffb647] border-2"
+// 					/>
+// 					{rating}
+// 				</div>
+// 			)
+// 		}
+// 	}
+// }
 
 const ProductItem = ({
 	brandName,
@@ -79,7 +80,7 @@ const ProductItem = ({
 								<p className="text-[12px] text-[#939393] leading-[18px]">
 									Review({numOfReview} review)
 								</p>
-								{rating && <Rating rating={rating} />}
+								{rating && <MuiRating rating={rating} />}
 							</div>
 						</div>
 					</div>
@@ -116,7 +117,7 @@ const ProductItem = ({
 									{price}.00
 								</p>
 								<p className="text-[14px] text-[#939393] leading-[18px]">
-									{rating}
+								{rating && <MuiRating rating={rating} />}
 								</p>
 								<p className="text-[12px] text-[#939393] leading-[18px] font-[400]">
 									Review ({numOfReview} review)
