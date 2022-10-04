@@ -19,7 +19,9 @@ const Cart = () => {
 					accumulator + item.quantity * item.attributes.price,
 				0
 			)
-		).toFixed(2)
+		).toLocaleString(undefined, {
+			minimumFractionDigits: 2,
+		})
 	}
 
 	return (
@@ -127,7 +129,7 @@ const Cart = () => {
 												</h4>
 											</td>
 											<td>
-												<h4 className="text-xl text-center">
+												<h4 className="text-xl text-center text-[#A0A0A0]">
 													{item.attributes.price}
 												</h4>
 											</td>
@@ -137,8 +139,12 @@ const Cart = () => {
 												</h4>
 											</td>
 											<td className="">
-												<h4 className="text-xl text-center">
-													{item.quantity * item.attributes.price}
+												<h4 className="text-xl text-center text-[#A0A0A0]">
+													{(
+														item.quantity * item.attributes.price
+													).toLocaleString(undefined, {
+														minimumFractionDigits: 2,
+													})}
 												</h4>
 											</td>
 										</tr>

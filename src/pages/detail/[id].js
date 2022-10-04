@@ -80,7 +80,10 @@ const Detail = ({ productDetail }) => {
 						</p>
 						<div className="flex gap-16 items-center justify-center lg:justify-start">
 							<p className="text-[#FF6F61] text-[28px] font-[500] leading-[36px]">
-								{productDetail.attributes.price}.00
+								{productDetail.attributes.price.toLocaleString(
+									undefined,
+									{ minimumFractionDigits: 2 }
+								)}
 							</p>
 							<p className="line-through text-[14px] text-[#939393] font-[400] leading-[22px]">
 								12,000.00

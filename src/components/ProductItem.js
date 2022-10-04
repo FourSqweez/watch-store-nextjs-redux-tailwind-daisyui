@@ -73,7 +73,7 @@ const ProductItem = ({
 									price
 								</p>
 								<p className="text-[14px] text-[#FF6F61] leading-[18px]">
-									{price}.00
+									{price.toLocaleString(undefined, {minimumFractionDigits: 2})}
 								</p>
 							</div>
 							<div>
