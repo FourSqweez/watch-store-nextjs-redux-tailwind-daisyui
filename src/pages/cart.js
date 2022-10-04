@@ -66,10 +66,10 @@ const Cart = () => {
 												<div className="mr-2 h-20 w-20 min-w-[4rem]  relative overflow-hidden rounded-md">
 													<Image
 														layout="fill"
-														alt=""
 														objectFit="inherit"
 														priority
 														src={item.attributes.image_url}
+														alt={item.attributes.name}
 													/>
 												</div>
 												<div className="">

@@ -27,7 +27,6 @@ export const getStaticPaths = async () => {
 }
 
 const Detail = ({ productDetail }) => {
-	//console.log('Product detail : ', productDetail)
 	const dispatch = useDispatch()
 	const [itemQuantity, setItemQuantity] = useState(0)
 
@@ -55,6 +54,7 @@ const Detail = ({ productDetail }) => {
 							height="400px"
 							className="rounded-[15px]"
 							priority
+							alt={productDetail.attributes.name}
 						/>
 					</div>
 					<div className="w-full h-full gap-2 flex flex-col">

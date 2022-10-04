@@ -6,8 +6,6 @@ import { IoGridOutline } from 'react-icons/io5'
 const ProductsList = ({ products }) => {
 	const [switched, setSwitched] = useState(true)
 
-	// console.log('test : ', products)
-
 	return (
 		<div className="w-full max-w-[1050px] my-10 mx-2">
 			<div className="flex justify-between items-center mb-5 h-10">
