@@ -37,7 +37,7 @@ const Cart = () => {
 	}
 
 	return (
-		<div className="flex w-full justify-center">
+		<div className="flex w-full h-screen justify-center">
 			<div className="max-w-[1050px] mb-10 mt-20 mx-2">
 				{cart.length === 0 ? (
 					<div className="flex h-full flex-col items-center justify-center gap-4">
