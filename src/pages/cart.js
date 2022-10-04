@@ -1,6 +1,9 @@
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
+import { removeAll } from '../app/slices/cartSlice'
 
 const Cart = () => {
 	const cart = useSelector((state) => state.cart)
@@ -9,6 +12,15 @@ const Cart = () => {
 		(accumulator, amount) => accumulator + amount,
 		0
 	)
+
+	const dispatch = useDispatch()
+	const router = useRouter()
+	const handleBack = () => {
+		router.replace('/')
+		setTimeout(() => {
+			dispatch(removeAll())
+		}, 1000)
+	}
 
 	console.log('cart : ', cart)
 
@@ -163,7 +175,10 @@ const Cart = () => {
 					</div>
 
 					<div className="flex justify-end mt-3 ">
-						<button className="btn border-none rounded-[8px] px-6 py-1.5 bg-[#FF6F61] leading-[18px] tracking-wider">
+						<button
+							onClick={handleBack}
+							className="btn border-none rounded-[8px] px-6 py-1.5 bg-[#FF6F61] leading-[18px] tracking-wider"
+						>
 							Proceed to checkout
 						</button>
 					</div>

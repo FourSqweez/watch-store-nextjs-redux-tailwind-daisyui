@@ -13,9 +13,14 @@ export const cartSlice = createSlice({
 				state.push({ ...action.payload, quantity: quantity })
 			}
 		},
+		removeAll: (state) => {
+			if (state.length > 0) {
+				state.splice(0, state.length)
+			}
+		},
 	},
 })
 
 export const cartReducer = cartSlice.reducer
 
-export const { addToCart } = cartSlice.actions
+export const { addToCart, removeAll } = cartSlice.actions
