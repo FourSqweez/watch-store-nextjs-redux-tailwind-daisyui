@@ -37,9 +37,9 @@ const Cart = () => {
 	}
 
 	return (
-		<div className="h-screen w-full flex justify-center items-center">
+		<div className="h-screen sm:mb-20 mt-16 pt-10 w-full flex justify-center items-center">
 			{cart.length === 0 ? (
-				<div className="flex flex-col items-center justify-center gap-4">
+				<div className="flex h-full flex-col items-center justify-center gap-4">
 					<h2 className="flex text-center justify-center">
 						Your Cart is Empty!
 					</h2>
@@ -174,7 +174,7 @@ const Cart = () => {
 						</h3>
 					</div>
 
-					<div className="flex justify-end mt-3 ">
+					<div className="flex justify-end mt-3  ">
 						<button
 							onClick={handleBack}
 							className="btn border-none rounded-[8px] px-6 py-1.5 bg-[#FF6F61] leading-[18px] tracking-wider"
