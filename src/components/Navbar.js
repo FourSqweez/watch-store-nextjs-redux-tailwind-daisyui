@@ -10,8 +10,6 @@ const Navbar = () => {
 		(accumulator, amount) => accumulator + amount,
 		0
 	)
-	console.log('Nav bar quantity : ', quantity)
-	console.log('Nav bar total quantity : ', totalAmounts)
 
 	return (
 		<div className='fixed top-0 w-full z-50'>
