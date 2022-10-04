@@ -37,7 +37,7 @@ const Cart = () => {
 	}
 
 	return (
-		<div className='flex w-full justify-center'>
+		<div className="flex w-full justify-center">
 			<div className="max-w-[1050px] mb-10 mt-20 mx-2">
 				{cart.length === 0 ? (
 					<div className="flex h-full flex-col items-center justify-center gap-4">
@@ -62,7 +62,7 @@ const Cart = () => {
 								{cart &&
 									cart.map((item) => (
 										<div key={item.id}>
-											<div className="flex justify-between h-full items-start last:mb-5">
+											<div className="flex justify-between h-full items-start border-b-2 py-2 first:border-t-2">
 												<div className="flex  h-full items-center ml-2">
 													<div className="mr-2 h-20 w-20 min-w-[4rem]  relative overflow-hidden rounded-md">
 														<Image
@@ -73,9 +73,9 @@ const Cart = () => {
 															alt={item.attributes.name}
 														/>
 													</div>
-													<div className="">
+													<div className="w-40">
 														<h4
-															className="w-40 xs:w-80 sm:w-full line-clamp-1"
+															className="w-40 sm:w-full line-clamp-1"
 															title={item.attributes.name}
 														>
 															{item.attributes.name}
@@ -135,7 +135,7 @@ const Cart = () => {
 														/>
 													</div>
 													<h4
-														className="w-full pl-2 items-center title text-2xl text-[#484848]"
+														className="w-full pl-2 items-center text-2xl text-[#484848]"
 														title={item.attributes.name}
 													>
 														{item.attributes.name}
