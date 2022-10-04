@@ -3,8 +3,10 @@ import React from 'react'
 import { BagHappy } from 'iconsax-react'
 import Link from 'next/link'
 import { useSelector } from 'react-redux'
+import { useRouter } from 'next/router'
 
 const Navbar = () => {
+	const router = useRouter()
 	const quantity = useSelector((state) => state.cart.map((q) => q.quantity))
 	const totalAmounts = quantity.reduce(
 		(accumulator, amount) => accumulator + amount,
@@ -15,7 +17,10 @@ const Navbar = () => {
 		<div className="fixed top-0 w-full z-50">
 			<div className="flex justify-center w-full h-[76px] bg-[#FF6F61] ">
 				<div className="flex w-full max-w-[1050px] mx-4 sm:mx-0 h-full justify-between items-center">
-					<div className="flex justify-center">
+					<div
+						className="flex justify-center cursor-pointer"
+						onClick={() => router.push('/')}
+					>
 						<Image
 							src="https://sagnerli.sirv.com/cc-quiz/cob-logo.png"
 							width={100}
