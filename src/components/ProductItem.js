@@ -24,7 +24,7 @@ const ProductItem = ({
 					}}
 					passHref
 				>
-					<div className="w-[250px] h-[366px] bg-[#FFFFFF] rounded-[8px] overflow-hidden cursor-pointer">
+					<div className="w-[250px] h-[366px] bg-[#FFFFFF] rounded-[8px] overflow-hidden cursor-pointer border-2 hover:border-[#FF6F61] hover:opacity-100 hover:shadow-slate-200 hover:shadow-lg hover:scale-105 duration-200 ease-out">
 						<div className="w-full">
 							<Image
 								width={250}
