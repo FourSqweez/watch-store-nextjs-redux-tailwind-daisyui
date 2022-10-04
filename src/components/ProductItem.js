@@ -5,6 +5,7 @@ import { MuiRating } from './MuiRating'
 
 const ProductItem = ({
 	brandLogo,
+	brandName,
 	name,
 	productId,
 	description,
@@ -41,6 +42,7 @@ const ProductItem = ({
 								height="40px"
 								className="rounded-[10px]"
 								priority
+								alt={brandName}
 							/>
 							<div className="w-full ">
 								<p className="text-[14px] font-[600] leading-[18px] line-clamp-2">
@@ -84,6 +86,7 @@ const ProductItem = ({
 									src={image}
 									priority
 									className="rounded-[8px]"
+									alt={name}
 								/>
 							</div>
 
